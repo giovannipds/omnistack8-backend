@@ -8,6 +8,10 @@ module.exports = {
     const loggedDev = await Dev.findById(user);
     const targetDev = await Dev.findById(devId);
 
+    if (!targetDev) {
+      return res.status(400).json({ error: 'Dev not exists' });
+    }
+
     return res.json({ ok: true });
   }
 }
