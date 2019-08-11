@@ -1,11 +1,9 @@
 const express = require('express');
 
-const server = express(); // creates the server
-
-// GET, POST, PUT, DELETE
+const server = express();
 
 server.get('/', (req, res) => {
-  return res.send('Hello World!');
+  return res.send('Hello World');
 });
 
-server.listen(3333); // listen the port
+server.listen(3333);
