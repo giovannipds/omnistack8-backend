@@ -15,6 +15,12 @@ io.on('connection', socket => {
   socket.on('hello', message => {
     console.log(message)
   })
+
+  setTimeout(() => {
+    socket.emit('world', {
+      message: 'OmniStack'
+    });
+  }, 5000)
 });
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-otrr0.mongodb.net/omnistack8?retryWrites=true&w=majority', {
